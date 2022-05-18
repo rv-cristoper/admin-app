@@ -1,0 +1,1357 @@
+/*!**********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/styles/index.css ***!
+  \**********************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap);
+/*!**************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/styles/index.css (1) ***!
+  \**************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap);
+/*!**************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/styles/index.css (2) ***!
+  \**************************************************************************************************************************/
+@import url(https://use.fontawesome.com/releases/v5.15.4/css/all.css);
+/*!**************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/shared/toast/toast.sass ***!
+  \**************************************************************************************************************************/
+.dashboard_toast--box {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+  right: -100%;
+  opacity: 1;
+  visibility: visible;
+  animation: 7s anim-toast-default;
+  transition: all 0.25s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.dashboard_toast--box.toast-with-animation {
+  animation: 7s anim-toast-auto-hidden;
+}
+.dashboard_toast--wrap {
+  display: grid;
+  color: #fff;
+  grid-template-columns: max-content auto;
+  grid-column-gap: 10px;
+  position: absolute;
+  align-items: center;
+  flex-direction: row;
+  min-width: 350px;
+  overflow: hidden;
+  box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.2), -6px -6px 12px 0 rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  padding: 10px;
+  max-width: 500px;
+  bottom: 30px;
+  right: 5px;
+}
+.dashboard_toast--wrap.success {
+  background: #27CD41;
+}
+.dashboard_toast--wrap.danger {
+  background: #FF3B2F;
+}
+.dashboard_toast--wrap.warning {
+  background: #FFCC02;
+}
+.dashboard_toast--wrap .iconInfoAlert {
+  font-size: 20px;
+}
+.dashboard_toast--wrap .msmInfoAlert {
+  margin: 0;
+  font-size: 15px;
+}
+
+@keyframes anim-toast-default {
+  10% {
+    right: 5px;
+    visibility: visible;
+    opacity: 1;
+  }
+  90% {
+    visibility: visible;
+    opacity: 1;
+    right: 5px;
+  }
+  98% {
+    right: -100%;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    right: 5px;
+  }
+}
+@keyframes anim-toast-auto-hidden {
+  10% {
+    right: 5px;
+    visibility: visible;
+    opacity: 1;
+  }
+  90% {
+    visibility: visible;
+    opacity: 1;
+    right: 5px;
+  }
+  98% {
+    right: -100%;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    right: -100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dashboard_toast--wrap {
+    min-width: 300px;
+  }
+}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/auth/scss/cardAuth.scss ***!
+  \*************************************************************************************************************************************/
+.containerAccess {
+  display: grid;
+  row-gap: 30px;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: left 0.5s;
+}
+.containerAccess.other {
+  left: -25vw;
+}
+.containerAccess.restore {
+  left: 85vw;
+}
+.containerAccess .returnAcces {
+  position: absolute;
+  left: 32px;
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #ff4248;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.containerAccess .titLoggin h1 {
+  font-family: "Poppins";
+  margin: 0;
+}
+.containerAccess .titLoggin p {
+  font-size: 13px;
+  color: #a5a5a5;
+  letter-spacing: 0.25px;
+}
+.containerAccess .titLoggin p span {
+  cursor: pointer;
+  color: #ff8e0a;
+  font-weight: 500;
+}
+.containerAccess .contbtnAccs {
+  display: flex;
+  gap: 15px;
+}
+.containerAccess .contbtnAccs button {
+  cursor: pointer;
+  background-color: inherit;
+  border: 1.5px solid #dadce0;
+  padding: 10px 20px;
+  border-radius: 12px;
+  display: flex;
+  column-gap: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  letter-spacing: 0.25px;
+  font-weight: 500;
+}
+.containerAccess .contbtnAccs button span:last-child {
+  display: none;
+}
+.containerAccess .contbtnAccs button:last-child {
+  color: #fff;
+  background-color: #166fe5;
+  border: 1.5px solid #166fe5;
+}
+.containerAccess .contbtnAccs button:last-child i {
+  font-size: 18px;
+}
+.containerAccess hr {
+  margin: 10px;
+  overflow: visible;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  color: #6e6d7a;
+  text-align: center;
+}
+.containerAccess hr::after {
+  content: "O";
+  display: inline-block;
+  position: relative;
+  top: -11px;
+  padding: 0 16px;
+  background: #fff;
+  font-size: 13px;
+}
+.containerAccess .contAccess form {
+  display: grid;
+  grid-template-rows: auto max-content;
+  grid-row-gap: 18px;
+}
+.containerAccess .contAccess form .formBody {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: max-content;
+  grid-row-gap: 18px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  font-size: 11px;
+}
+.containerAccess .contAccess form .formBody label {
+  position: relative;
+  font-family: "Poppins";
+  font-size: 13px;
+  font-weight: 600;
+}
+.containerAccess .contAccess form .formBody label input,
+.containerAccess .contAccess form .formBody label textarea {
+  margin-top: 10px;
+  padding: 0.8rem;
+  padding-left: 50px;
+  border-radius: 10px;
+  border: none;
+  letter-spacing: 1.25px;
+  background-color: #fff;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-size: 13px;
+  border: 1.5px solid #dadce0;
+}
+.containerAccess .contAccess form .formBody label input::-ms-reveal,
+.containerAccess .contAccess form .formBody label textarea::-ms-reveal {
+  display: none;
+}
+.containerAccess .contAccess form .formBody label textarea {
+  padding: 0.8rem;
+  height: 100px;
+  resize: none;
+}
+.containerAccess .contAccess form .formBody label i {
+  color: #888787;
+  position: absolute;
+  font-size: 18px;
+  left: 20px;
+  bottom: 12px;
+}
+.containerAccess .contAccess form .formBody label:last-child input {
+  padding-right: 40px;
+}
+.containerAccess .contAccess form .formBody label:last-child i:last-child {
+  right: 10px;
+  left: auto;
+  cursor: pointer;
+}
+.containerAccess .contAccess form p {
+  color: #ff4248;
+  font-size: 13px;
+  font-family: "Poppins";
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.containerAccess .contAccess form p.sucess {
+  color: #47c65d;
+}
+.containerAccess .contAccess form .formFooter {
+  display: grid;
+  grid-row-gap: 16px;
+}
+.containerAccess .contAccess form .formFooter button {
+  padding: 1rem;
+  border-radius: 45px;
+  border: none;
+  width: 100%;
+  background-color: #ff8e0a;
+  color: #fff;
+  letter-spacing: 1.25px;
+  font-family: system-ui;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+.containerAccess .contAccess form .formFooter span {
+  text-align: right;
+  font-size: 13px;
+  letter-spacing: 0.25px;
+  cursor: pointer;
+  color: #ff8e0a;
+  font-weight: 500;
+}
+.containerAccess .contAccess form .indSocial p {
+  color: #1f1f37;
+}
+.containerAccess .contAccess form .indSocial div {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+  padding-top: 20px;
+}
+.containerAccess .contAccess form .indSocial div img {
+  width: 30px;
+  cursor: pointer;
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+.containerAccess .contAccess form .indSocial div img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+@media screen and (max-width: 890px) {
+  .containerAccess.restore {
+    left: 130vw;
+  }
+}
+@media screen and (max-width: 680px) {
+  .containerAccess.other {
+    left: -50vw;
+  }
+  .containerAccess.restore {
+    left: 150vw;
+  }
+}
+@media screen and (max-width: 425px) {
+  .containerAccess {
+    row-gap: 15px;
+  }
+  .containerAccess .titLoggin h1 {
+    font-size: 22px;
+  }
+  .containerAccess .contbtnAccs button {
+    height: 35px;
+  }
+  .containerAccess .contbtnAccs button span {
+    display: none;
+  }
+  .containerAccess .contbtnAccs button span:last-child {
+    display: block;
+  }
+  .containerAccess .contAccess form p {
+    margin: 0;
+  }
+  .containerAccess .contAccess form .formBody label input,
+.containerAccess .contAccess form .formBody label textarea {
+    margin-top: 5px;
+    padding: 0.6rem;
+    padding-left: 50px;
+  }
+  .containerAccess .contAccess form .formBody label textarea {
+    padding: 0.6rem;
+  }
+  .containerAccess .contAccess form .formBody label i {
+    bottom: 10px;
+  }
+  .containerAccess .contAccess form .formFooter button {
+    height: 35px;
+    padding: 0;
+  }
+}
+/*!*************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/pages/scss/loggin.scss ***!
+  \*************************************************************************************************************************/
+.contSeparate {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+.contSeparate.open {
+  opacity: 1;
+}
+
+.logginPage {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 500px auto;
+}
+.logginPage .sectionBanner {
+  background-color: #1f1f37;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 40px;
+  padding: 32px 64px;
+}
+.logginPage .sectionBanner .logo {
+  width: 200px;
+  height: 30px;
+}
+.logginPage .sectionBanner .bannerImg {
+  display: flex;
+  justify-content: center;
+}
+.logginPage .sectionBanner .bannerImg img {
+  width: 350px;
+}
+.logginPage .sectionBanner > h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+}
+.logginPage .sectionAcces {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  overflow-y: auto;
+  position: relative;
+  overflow-x: hidden;
+}
+.logginPage .anyquestion {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50px;
+  background-color: #1f1f37;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+.logginPage .anyquestion img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+}
+.logginPage .anyquestion i {
+  color: #fff;
+  font-size: 21px;
+  position: relative;
+  left: -5px;
+}
+
+@media screen and (max-width: 890px) {
+  .logginPage {
+    grid-template-columns: auto;
+  }
+  .logginPage .sectionBanner {
+    display: none;
+  }
+}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/layout/scss/header.scss ***!
+  \*************************************************************************************************************************************/
+.header {
+  width: 100%;
+  background-color: #1e2022;
+  color: #e0e3e8;
+}
+.header .containerMain {
+  display: flex;
+  padding: 11px 30px;
+  justify-content: space-between;
+  height: 65px;
+}
+.header .containerMain .menHumbr {
+  display: none;
+}
+.header .containerMain .logo {
+  display: flex;
+}
+.header .containerMain .logo img {
+  width: 200px;
+}
+.header .containerMain .navigate {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-family: "Poppins";
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .header .containerMain {
+    align-items: center;
+  }
+  .header .containerMain .menHumbr {
+    display: block;
+    height: max-content;
+    cursor: pointer;
+  }
+  .header .containerMain .logo img {
+    display: none;
+  }
+}
+/*!**************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/layout/scss/sidebar.scss ***!
+  \**************************************************************************************************************************************/
+.sidebar {
+  margin: 0;
+  background-color: #ff8e0a;
+  padding: 30px 0;
+  font-size: 18px;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.sidebar .closeSide {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+  height: max-content;
+  cursor: pointer;
+}
+.sidebar li {
+  list-style: none;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar .active {
+  background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    padding-top: 70px;
+    left: -100vw;
+    transition: left 0.3s;
+  }
+  .sidebar.active {
+    left: 0;
+  }
+  .sidebar .closeSide {
+    display: block;
+  }
+}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/layout/scss/layout.scss ***!
+  \*************************************************************************************************************************************/
+.cntLoader {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  opacity: 1;
+  transition: opacity 1.5s;
+}
+.cntLoader.close {
+  opacity: 0;
+}
+
+.layout {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 87px auto;
+}
+.layout .constsidebar {
+  display: grid;
+  grid-template-columns: 260px auto;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .layout .constsidebar {
+    grid-template-columns: none;
+  }
+}
+/*!************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/shared/loaderPage/loaderPage.sass ***!
+  \************************************************************************************************************************************/
+.main_LoaderPage {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.main_LoaderPage .containerImgMoment {
+  width: 100%;
+  max-width: calc(500px - 1rem);
+  position: relative;
+  padding: 0 0.5rem;
+}
+.main_LoaderPage .containerImgMoment .cntSkele {
+  position: absolute;
+  top: 34px;
+  left: 27px;
+  right: 140px;
+  bottom: 88px;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.main_LoaderPage .containerImgMoment .cntSkele .board {
+  display: flex;
+  column-gap: 15px;
+  width: 100%;
+}
+.main_LoaderPage .containerImgMoment .cntSkele .board div:nth-child(2) {
+  width: calc(100% - 105px);
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.main_LoaderPage .containerImgMoment .svgMoment {
+  width: 100%;
+  height: 100%;
+}
+.main_LoaderPage .containerImgMoment img {
+  display: none;
+}
+.main_LoaderPage .containerImgMoment .containerText {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 135px;
+  height: 67px;
+  display: flex;
+  align-items: center;
+}
+.main_LoaderPage .containerImgMoment .containerText .text {
+  font-size: 20px;
+}
+.main_LoaderPage .containerImgMoment .containerText .text.animate {
+  animation-duration: 7s;
+  animation-name: showText;
+  animation-iteration-count: infinite;
+}
+
+@keyframes showText {
+  from {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+#Vector_3, #Vector_10, #Vector_11, #Vector_12 {
+  fill: #ff8e0a;
+}
+
+@media screen and (max-width: 530px) {
+  .main_LoaderPage .containerImgMoment {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main_LoaderPage .containerImgMoment .cntSkele, .main_LoaderPage .containerImgMoment .svgMoment {
+    display: none;
+  }
+  .main_LoaderPage .containerImgMoment img {
+    display: block;
+  }
+  .main_LoaderPage .containerImgMoment .containerText {
+    position: relative;
+    width: calc(100% - 40px);
+    padding: 20px;
+    text-align: center;
+  }
+}
+/*!***********************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/shared/modal/containerModal.sass ***!
+  \***********************************************************************************************************************************/
+#root-portal {
+  background: rgba(20, 22, 24, 0.75);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: table;
+  z-index: 10;
+  animation: showModal 0.4s;
+}
+#root-portal .contentModal {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+#root-portal .contentModal .main_modal {
+  max-width: 488px;
+  width: 100%;
+  display: inline-block;
+}
+#root-portal .contentModal .main_modal .headModal {
+  background: #ff8e0a;
+  color: #fff;
+  display: flex;
+  padding: 16px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+  justify-content: center;
+}
+#root-portal .contentModal .main_modal .headModal h3 {
+  margin: 0;
+  font-size: 20px;
+}
+#root-portal .contentModal .main_modal .headModal span {
+  font-weight: 500;
+  font-size: 35px;
+  position: absolute;
+  right: 20px;
+  top: 4px;
+  cursor: pointer;
+}
+#root-portal .contentModal .main_modal .bodyModals {
+  background: #fff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 22px;
+  display: grid;
+  grid-row-gap: 15px;
+}
+#root-portal .contentModal .main_modal .bodyModals > div, #root-portal .contentModal .main_modal .bodyModals form {
+  display: grid;
+  grid-auto-flow: row;
+  grid-row-gap: 15px;
+  font-size: 14px;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > p:first-child, #root-portal .contentModal .main_modal .bodyModals form > p:first-child {
+  font-size: 16px;
+  font-weight: 500;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:first-child, #root-portal .contentModal .main_modal .bodyModals form > div:first-child {
+  display: grid;
+  grid-auto-flow: row;
+  grid-row-gap: 15px;
+  text-align: left;
+  font-size: 14px;
+  height: auto;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-bottom: 1px;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:first-child::-webkit-scrollbar, #root-portal .contentModal .main_modal .bodyModals form > div:first-child::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:first-child::-webkit-scrollbar:vertical, #root-portal .contentModal .main_modal .bodyModals form > div:first-child::-webkit-scrollbar:vertical {
+  width: 20px;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:first-child::-webkit-scrollbar:horizontal, #root-portal .contentModal .main_modal .bodyModals form > div:first-child::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:first-child::-webkit-scrollbar-track, #root-portal .contentModal .main_modal .bodyModals form > div:first-child::-webkit-scrollbar-track {
+  border-radius: 10px;
+  -webkit-box-shadow: none;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:first-child::-webkit-scrollbar-thumb, #root-portal .contentModal .main_modal .bodyModals form > div:first-child::-webkit-scrollbar-thumb {
+  background-color: rgba(80, 80, 80, 0.2196078431);
+  border-radius: 0;
+  border-left: 10px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:first-child::-webkit-scrollbar-thumb:hover, #root-portal .contentModal .main_modal .bodyModals form > div:first-child::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(80, 80, 80, 0.5803921569);
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:first-child::-webkit-scrollbar-thumb:active, #root-portal .contentModal .main_modal .bodyModals form > div:first-child::-webkit-scrollbar-thumb:active {
+  background-color: #ff8e0a;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:first-child > div, #root-portal .contentModal .main_modal .bodyModals form > div:first-child > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:first-child label, #root-portal .contentModal .main_modal .bodyModals form > div:first-child label {
+  width: 100%;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:first-child label p, #root-portal .contentModal .main_modal .bodyModals form > div:first-child label p {
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:first-child label input, #root-portal .contentModal .main_modal .bodyModals > div > div:first-child label select, #root-portal .contentModal .main_modal .bodyModals > div > div:first-child label textarea, #root-portal .contentModal .main_modal .bodyModals form > div:first-child label input, #root-portal .contentModal .main_modal .bodyModals form > div:first-child label select, #root-portal .contentModal .main_modal .bodyModals form > div:first-child label textarea {
+  border: 1px solid #D8CCCC;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 0.5rem;
+  width: 100%;
+  outline: none;
+  background-color: #ffffff;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:first-child label input:focus, #root-portal .contentModal .main_modal .bodyModals > div > div:first-child label select:focus, #root-portal .contentModal .main_modal .bodyModals > div > div:first-child label textarea:focus, #root-portal .contentModal .main_modal .bodyModals form > div:first-child label input:focus, #root-portal .contentModal .main_modal .bodyModals form > div:first-child label select:focus, #root-portal .contentModal .main_modal .bodyModals form > div:first-child label textarea:focus {
+  border-color: #ff8e0a;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:first-child label textarea, #root-portal .contentModal .main_modal .bodyModals form > div:first-child label textarea {
+  height: 80px;
+  resize: none;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:first-child label input[disabled], #root-portal .contentModal .main_modal .bodyModals form > div:first-child label input[disabled] {
+  cursor: default !important;
+  opacity: 0.9 !important;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:last-child, #root-portal .contentModal .main_modal .bodyModals form > div:last-child {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  justify-content: right;
+  grid-column-gap: 10px;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:last-child button, #root-portal .contentModal .main_modal .bodyModals form > div:last-child button {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #ff8e0a;
+  color: #ff8e0a;
+  cursor: pointer;
+  background-color: #fff;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:last-child button:last-child, #root-portal .contentModal .main_modal .bodyModals form > div:last-child button:last-child {
+  border: none;
+  color: #fff;
+  background-color: #ff8e0a;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:last-child button:last-child:hover, #root-portal .contentModal .main_modal .bodyModals form > div:last-child button:last-child:hover {
+  opacity: 0.8;
+}
+#root-portal .contentModal .main_modal .bodyModals > div > div:last-child {
+  justify-content: center;
+}
+
+@keyframes showModal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 488px) {
+  #root-portal .contentModal .main_modal .bodyModals > div > div:first-child > div, #root-portal .contentModal .main_modal .bodyModals form > div:first-child > div {
+    grid-template-columns: none;
+  }
+}
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/userItem/scss/userItem.scss ***!
+  \*****************************************************************************************************************************************/
+.userItem {
+  border: 1px solid #b7b7b7;
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  font-weight: 700;
+  font-family: "Roboto";
+  max-width: 700px;
+}
+.userItem .Inactivo {
+  color: red;
+  font-weight: 900;
+  font-size: 20px;
+}
+.userItem .Activo {
+  color: #27cd41;
+  font-weight: 900;
+  font-size: 20px;
+}
+.userItem .sepinf {
+  display: flex;
+  width: 100%;
+}
+.userItem .sepinf > div {
+  width: 50%;
+}
+.userItem span {
+  font-weight: normal;
+}
+.userItem button {
+  color: #27cd41;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+/*!***************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/pages/scss/userPage.scss ***!
+  \***************************************************************************************************************************/
+.userPage {
+  overflow-y: auto;
+  padding: 35px 25px;
+}
+.userPage h1 {
+  margin: 0;
+}
+.userPage > button {
+  margin: 30px 0;
+  border: navajowhite;
+  background-color: #27CD41;
+  color: #fff;
+  font-weight: 400;
+  height: 35px;
+  width: 120px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.userPage .containerUsers {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+/*!*******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app/components/notices/scss/commingSoon.scss ***!
+  \*******************************************************************************************************************************************/
+.commingSoon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.commingSoon h1 {
+  font-family: "Roboto";
+  font-size: 45px;
+}
+/*!***********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/styles/normalize.css ***!
+  \***********************************************************************************/
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+     ========================================================================== */
+
+/**
+   * Remove the margin in all browsers.
+   */
+
+body {
+    margin: 0;
+}
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+
+main {
+    display: block;
+}
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/* Grouping content
+     ========================================================================== */
+
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+
+hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+     ========================================================================== */
+
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+
+a {
+    background-color: transparent;
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+
+abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+
+small {
+    font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/* Embedded content
+     ========================================================================== */
+
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+
+img {
+    border-style: none;
+}
+
+/* Forms
+     ========================================================================== */
+
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+
+button,
+input {
+    /* 1 */
+    overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+
+button,
+select {
+    /* 1 */
+    text-transform: none;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+/**
+   * Correct the padding in Firefox.
+   */
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+
+legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+}
+
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+
+progress {
+    vertical-align: baseline;
+}
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+
+textarea {
+    overflow: auto;
+}
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+
+[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+}
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+}
+
+/* Interactive
+     ========================================================================== */
+
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+
+details {
+    display: block;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+
+summary {
+    display: list-item;
+}
+
+/* Misc
+     ========================================================================== */
+
+/**
+   * Add the correct display in IE 10+.
+   */
+
+template {
+    display: none;
+}
+
+/**
+   * Add the correct display in IE 10.
+   */
+
+[hidden] {
+    display: none;
+}
+
+/*!**************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/styles/index.css (3) ***!
+  \**************************************************************************************************************************/
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f7f8fa;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-decoration-color: none;
+}
+
+button[disabled],
+input[disabled],
+textarea[disabled] {
+  cursor: no-drop !important;
+  opacity: 0.5;
+}
+
+.skeleton {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  background-size: 800px;
+}
+
+.skeleton .text {
+  height: 18px;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+.disabled {
+  cursor: no-drop !important;
+  opacity: 0.5;
+  pointer-events: none;
+}
